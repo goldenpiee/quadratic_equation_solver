@@ -24,7 +24,6 @@ jobs:
       run: |
         coverage run -m unittest discover -s $GITHUB_WORKSPACE/tests -p 'test_*.py'
         coverage report -m
-        coverage xml -o coverage.xml  # Save coverage data in XML format
 
     - name: Upload coverage to Coveralls
       env:
