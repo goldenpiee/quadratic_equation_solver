@@ -1,6 +1,3 @@
 [run]
-source = C:\Users\qwe\Documents\GitHub\quadratic_equation_solver\src
+source = src
 
-[paths]
-source =
-    C:\Users\qwe\Documents\GitHub\quadratic_equation_solver
