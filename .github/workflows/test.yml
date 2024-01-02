@@ -20,9 +20,6 @@ jobs:
         pip install -r requirements.txt
         pip install coveralls
 
-    - name: Set up PYTHONPATH
-      run: export PYTHONPATH=$PYTHONPATH:$GITHUB_WORKSPACE
-
     - name: Run tests
       run: python -m unittest discover -s quadratic_equation_solver/tests -p 'test_*.py'
 
