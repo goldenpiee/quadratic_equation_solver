@@ -2,4 +2,5 @@
 source = src
 
 [paths]
+source =
     quadratic_equation_solver/
