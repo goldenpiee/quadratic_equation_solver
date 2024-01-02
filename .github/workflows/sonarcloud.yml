@@ -1,0 +1,27 @@
+name: SonarCloud Analysis
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  sonarcloud:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up SonarCloud
+        uses: sonarsource/setup-sonarcloud@v1
+        with:
+          sonar-project-key: ${{ secrets.SONAR_PROJECT_KEY }}
+          sonar-organization: ${{ secrets.SONAR_ORGANIZATION }}
+          sonar-host-url: ${{ secrets.SONAR_HOST_URL }}
+          sonar-login: ${{ secrets.SONAR_TOKEN }}
+
+      - name: Build and analyze
+        run: |
+          mvn clean install
+          sonar-scanner
