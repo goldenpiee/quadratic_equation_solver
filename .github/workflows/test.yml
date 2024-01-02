@@ -21,12 +21,20 @@ jobs:
         pip install coveralls
 
     - name: Run tests
-      run: python -m unittest discover -s tests -p 'test_*.py'
+      run: |
+        python -m unittest discover -s tests -p 'test_*.py'
+        echo "Tests completed successfully."
 
     - name: Collect coverage data
-      run: coverage combine
+      run: |
+        coverage run -m unittest discover -s tests -p 'test_*.py'
+        coverage combine
+        echo "Coverage data collected."
 
     - name: Upload coverage to Coveralls
       env:
         COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
-      run: python -m coveralls
+      run: |
+        python -m coveralls
+        echo "Coverage data uploaded to Coveralls."
+    
