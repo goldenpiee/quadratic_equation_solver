@@ -1,2 +1,5 @@
 [run]
 source = src
+
+[paths]
+    quadratic_equation_solver/
