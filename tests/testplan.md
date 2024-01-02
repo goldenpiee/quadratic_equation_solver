@@ -24,7 +24,7 @@
 
 1. Запустите тесты с использованием стандартной библиотеки `unittest`:
     ```bash
-    python -m unittest discover -s tests -p 'test_*.py'
+   python -m unittest discover -s C:\Users\qwe\Documents\GitHub\quadratic_equation_solver\tests -p 'test_*.py'
 
     ```
 
