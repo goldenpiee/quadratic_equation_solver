@@ -22,14 +22,17 @@ jobs:
 
     - name: Run tests
       run: |
-        export PYTHONPATH=$PYTHONPATH:$(pwd)
+        export PYTHONPATH=$PYTHONPATH:$GITHUB_WORKSPACE
         python -m unittest discover -s tests -p 'test_*.py'
+    
 
     - name: Collect coverage data
       run: |
+        export PYTHONPATH=$PYTHONPATH:$GITHUB_WORKSPACE
         coverage run -m unittest discover -s tests -p 'test_*.py'
         coverage combine
         echo "Coverage data collected."
+    
 
     - name: Upload coverage to Coveralls
       env:
