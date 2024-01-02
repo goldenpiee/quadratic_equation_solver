@@ -24,4 +24,6 @@ jobs:
       run: python -m unittest discover -s tests -p 'test_*.py'
 
     - name: Upload coverage to Coveralls
+      env:
+        COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
       run: coveralls
