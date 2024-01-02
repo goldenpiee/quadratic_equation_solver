@@ -16,7 +16,12 @@ jobs:
         python-version: 3.8
 
     - name: Install dependencies
-      run: pip install -r requirements.txt
+      run: |
+        pip install -r requirements.txt
+        pip install coveralls
 
     - name: Run tests
       run: python -m unittest discover -s tests -p 'test_*.py'
+
+    - name: Upload coverage to Coveralls
+      run: coveralls
