@@ -1,6 +1,7 @@
 import unittest
 from src.quadratic_solver import solve_quadratic_equation
 
+
 class TestQuadraticSolver(unittest.TestCase):
 
     def test_real_roots_zero_discriminant(self):

@@ -1,5 +1,4 @@
-import cmath  # Импортируем cmath для работы с комплексными числами
-
+import cmath
 
 def solve_quadratic_equation(a, b, c):
     # Вычисляем дискриминант

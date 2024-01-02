@@ -24,7 +24,8 @@
 
 1. Запустите тесты с использованием стандартной библиотеки `unittest`:
     ```bash
-    python -m unittest test_quadratic_solver.py
+    python -m unittest discover -s tests -p 'test_*.py'
+
     ```
 
 ## Ожидаемые результаты
