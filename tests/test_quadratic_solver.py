@@ -11,7 +11,7 @@ class TestQuadraticSolver(unittest.TestCase):
         self.assertEqual(solve_quadratic_equation(1, -3, 2), (2, 1))
 
     def test_real_roots_negative_discriminant(self):
-        self.assertEqual(solve_quadratic_equation(1, 1, 1), None)
+        self.assertIsNone(solve_quadratic_equation(1, 1, 1), None)
 
     def test_a_zero(self):
         with self.assertRaises(ValueError):
