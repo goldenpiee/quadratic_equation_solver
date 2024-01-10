@@ -13,13 +13,13 @@ class TestQuadraticSolver(unittest.TestCase):
     def test_real_roots_negative_discriminant(self):
         self.assertEqual(solve_quadratic_equation(1, 1, 1), None)
 
-    def test_invalid_coefficient_a(self):
+    def test_a_zero(self):
         with self.assertRaises(ValueError):
-            solve_quadratic_equation(0, 1, 1)
+            solve_quadratic_equation(0, 2, 3)
 
-    def test_invalid_coefficients_a_and_b(self):
+    def test_a_and_b_zero(self):
         with self.assertRaises(ValueError):
-            solve_quadratic_equation(0, 0, 1)
+            solve_quadratic_equation(0, 0, 3)
 
 
 if __name__ == '__main__':
