@@ -24,3 +24,7 @@ python -m unittest discover -s tests -p 'test_*.py'
 coverage run -m unittest discover -s tests -p 'test_*.py'
 coverage report
 ```
+[![Quality gate](https://sonarcloud.io/api/project_badges/quality_gate?project=goldenpiee_quadratic_equation_solver)](https://sonarcloud.io/summary/new_code?id=goldenpiee_quadratic_equation_solver)
+
+[![Coverage Status](https://coveralls.io/repos/github/goldenpiee/quadratic_equation_solver/badge.svg?branch=main)](https://coveralls.io/github/goldenpiee/quadratic_equation_solver?branch=main)
+
